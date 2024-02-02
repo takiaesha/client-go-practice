@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: k8s-client
+  name: k8s-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-client
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: k8s-client
+    spec:
+      containers:
+      - image: takia111/k8s-client:0.1.0
+        name: k8s-client
+        resources: {}
+status: {}
